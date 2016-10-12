@@ -1,4 +1,18 @@
 from django.contrib import admin
-from .models import Post
+from bresult.models import Person, Result
 
-admin.site.register(Post)
+
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ['id','first_name','last_name']
+    pass
+
+class ResultAdmin(admin.ModelAdmin):
+    model = Result
+    list_display = ['id','person','result', 'number', ]
+
+
+
+
+admin.site.register(Person, PersonAdmin)
+admin.site.register(Result, ResultAdmin)
+
