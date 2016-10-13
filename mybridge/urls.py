@@ -26,6 +26,6 @@ urlpatterns = [
     url(r'^about/$',    AboutView.as_view()),
     url(r'persons/$',   PersonList.as_view()),
     url(r'^admin/',     include(admin.site.urls)),
-
+    url(r'^accounts/', include('registration.urls')),
     #    url(r'^login/$', AboutView.as_view()),
 ]
