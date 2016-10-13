@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 class Person(models.Model):
     first_name = models.CharField(max_length=30)
@@ -8,7 +10,7 @@ class Person(models.Model):
         return self.last_name
 
 class Result(models.Model):
-    person = models.ForeignKey(Person)
+    user_id = models.ForeignKey(User,on_delete=models.SET_NULL, related_name="person", null=True, blank=True)
     number = models.IntegerField()
     result = models.IntegerField()
 

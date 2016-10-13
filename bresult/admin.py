@@ -8,8 +8,8 @@ class PersonAdmin(admin.ModelAdmin):
 
 class ResultAdmin(admin.ModelAdmin):
     model = Result
-    list_display = ['id','person','result', 'number', ]
-
+    list_display = ['user_id','result', 'number', ]
+    pass
 
 
 
