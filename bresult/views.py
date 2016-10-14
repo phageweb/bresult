@@ -14,6 +14,8 @@ class ResultList(ListView):
     model = Result
     template_name = "result_list.html"
 
+class StartView(TemplateView):
+    template_name = "base.html"
 
 
 
