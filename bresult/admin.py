@@ -8,7 +8,7 @@ class PersonAdmin(admin.ModelAdmin):
 
 class ResultAdmin(admin.ModelAdmin):
     model = Result
-    list_display = ['user_id','result', 'number', ]
+    list_display = ['round','user_id','result', 'number', ]
     pass
 
 class TournamentAdmin(admin.ModelAdmin):

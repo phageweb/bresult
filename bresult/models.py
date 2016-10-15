@@ -9,15 +9,18 @@ class Person(models.Model):
     def __str__(self):
         return self.last_name
 
+class Tournament(models.Model):
+    round = models.IntegerField()
+
+    def __str__(self):
+        return self.round
+
 class Result(models.Model):
+    
     user_id = models.ForeignKey(User,on_delete=models.SET_NULL, related_name="person", null=True, blank=True)
     number = models.IntegerField()
     result = models.IntegerField()
-#    tournament_round = models.IntegerField();
 
-class Tournament(models.Model):
-    round = models.IntegerField()
-#    cmd_next_round = models.IntegerField()
 	
     def nextRound(self,a):
         self.round = a	

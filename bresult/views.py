@@ -31,3 +31,4 @@ def result_new(request):
         else:
             form = ResultForm()
         return render(request, 'result_new.html', {'form': form})
+
