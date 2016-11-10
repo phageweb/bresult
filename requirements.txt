@@ -1,0 +1,8 @@
+Django==1.8
+django-countries==4.0
+django-crispy-forms==1.6.0
+django-guardian==1.4.6
+django-registration==2.1.2
+django-registration-redux==1.5a0
+django.js==0.8.1
+six==1.10.0
