@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from bresult import views
-from bresult.views import AboutView, StartView, ResultList
+from bresult.views import AboutView, StartView, PairList
 from django.contrib import admin
 from django.conf.urls import include
 
@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^$',   StartView.as_view()),
     url(r'^admin/',     include(admin.site.urls)),
     url(r'^accounts/', include('registration.urls')),
-    url(r'^result/new/$', views.result_new, name='result_new'),
+#    url(r'^result/new/$', views.result_new, name='result_new'),
+    url(r'^pair/new/$', views.pair_new, name='pair_new'),
     #    url(r'^login/$', AboutView.as_view()),
 ]

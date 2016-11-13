@@ -6,8 +6,8 @@ class Person(models.Model):
     user = models.OneToOneField(User,on_delete=models.SET_NULL, related_name="person", null=True, blank=True)
     database = models.IntegerField()
 
-#    def __str__(self):
-#        return self.user.last_name
+    def __str__(self):
+        return self.user.last_name
 
 class Pair(models.Model):
     id = models.IntegerField(primary_key = True)
@@ -30,9 +30,3 @@ class Tournament(models.Model):
     def __str__(self):
         return str(self.round)
 
-class Result(models.Model):
-    id = models.IntegerField(primary_key = True)
-    pair1 = models.ForeignKey(Pair,on_delete=models.SET_NULL, related_name="pair1", null=True, blank=True)
-    pair2 = models.ForeignKey(Pair,on_delete=models.SET_NULL, related_name="pair2", null=True, blank=True)
-    board = models.IntegerField()
-    result = models.IntegerField()
